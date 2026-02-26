@@ -1,0 +1,907 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.logoMty {
+display:flex;
+align-items: center;
+}
+
+.alojamientoBonito {
+  width: 100%;          
+  height: 250px;
+  margin-right: auto;
+    object-fit: cover;
+}
+.tiktok-sans {
+  font-family: "TikTok Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100;
+}
+.fugaz-one-regular {
+  font-family: "Fugaz One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+/* Caligrafia  */
+.titulo {
+font-family: 'Fugaz One', sans-serif;
+
+  font-weight: 700;
+  font-size: 2.5rem;
+
+  color: #ffffff; /* Amarillo brillante para destacar sobre fondo azul */
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  transition: transform 0.3s, color 0.3s;
+
+
+
+}
+
+.titulo:hover {
+  transform: scale(1.05);
+  color: #FFD633; /* Amarillo más claro al pasar el cursor */
+}
+
+
+/* Contenedor general */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+.header {
+  background-color: #101ee9; /* azul oscuro profesional */
+  color: #fff;
+  padding: 15px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* agrega profundidad */
+}
+
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+
+.menu a {
+  display: inline-block; /* permite aplicar padding y bordes redondos */
+    background-color: rgba(255, 255, 255, 0.1); /* fondo semitransparente */
+  padding: 11px 11px; /* espacio interno del botón */
+  border-radius: 25px; /* hace el botón redondo */
+
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: 550;
+  text-decoration: none;
+
+  font-family: 'Roboto', sans-serif; /* nueva tipografía para los enlaces */
+  font-size: 1rem; /* tamaño legible */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15); /* sombra sutil */
+
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+
+}
+
+.menu a:hover {
+  color: #1a1a1a; /* color final al pasar el cursor */
+  transform: scale(1.05) translateY(-3px); /* zoom + ligero movimiento */
+    background-color: #ffcc00; /* amarillo del logo o marca */
+
+}
+
+
+
+
+/* ======== ESTILOS GENERALES ======== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f8fc;
+  color: #333;
+}
+
+/* ======== SECCIÓN DE PROPIEDADES ======== */
+.propiedades {
+  padding: 70px 0;
+  background: linear-gradient(to bottom, #f7f8fc, #eef3f8);
+}
+
+.propiedades h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #003366;
+  margin-bottom: 50px;
+  font-weight: 700;
+  position: relative;
+}
+
+.propiedades h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #00aaff;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+/* ======== GRID ======== */
+.grid-propiedades {
+  display: grid;
+grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ======== TARJETAS ======== */
+.tarjeta {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.tarjeta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.tarjeta:hover img {
+  transform: scale(1.05);
+}
+
+/* ======== CONTENIDO DE LA TARJETA ======== */
+.tarjeta h3 {
+  margin: 15px 15px 5px;
+  font-size: 1.25rem;
+  color: #004080;
+  font-weight: 600;
+}
+
+.tarjeta p {
+  margin: 0 15px 10px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.tarjeta p:last-child {
+  font-weight: 700;
+  color: #00aaff;
+}
+
+/* ======== IMAGEN DECORATIVA ======== */
+.alojamientoBonito {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-bottom: 4px solid #00aaff;
+  margin-bottom: -20px;
+  filter: brightness(0.9);
+}
+.btn-detalle {
+  display: inline-block;
+  margin: 10px 15px 20px;
+  background-color: #00aaff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+.btn-detalle:hover {
+  background-color: #007acc;
+}
+
+
+/* Cómo funciona */
+.como-funciona {
+  /* 👇 Usa tu imagen local aquí */
+  background-image: url("C:/Users/rober/Documents/CheckInMty/mtyIMG.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* efecto leve de "parallax" */
+  
+  /* 👇 Capa semitransparente para que el texto sea legible */
+  position: relative;
+  z-index: 1;
+  padding: 80px 0;
+}
+
+.como-funciona::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* oscurece el fondo */
+  z-index: -1;
+}
+
+.como-funciona h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.3rem;
+  color: white;
+}
+
+.pasos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.paso {
+  flex: 1 1 250px; 
+  background: rgba(255, 255, 255, 0.9); /* transparente para que se vea el fondo */
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.paso:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.paso h3 {
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+
+.paso p {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+
+
+/* ===== HERO HEADER ===== */
+.hero-header {
+  position: relative;
+  height: 120vh; /* ocupa toda la pantalla */
+  background-image: url("bosque.jpg"); /* tu imagen */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Capa oscura para contraste */
+.hero-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+/* Menú sobre la imagen */
+.hero-header .menu {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.hero-header .menu a {
+  color: #fff;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.hero-header .menu a:hover {
+  background: #ffcc00;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* Texto principal centrado */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  flex: 1; /* ocupa el espacio vertical disponible */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente */
+  justify-content: center; /* centra verticalmente */
+  text-align: center;
+  padding-bottom: 80px; /* margen hacia abajo */
+}
+
+.hero-title {
+
+  font-size: clamp(4rem, 8vw, 7rem); /* Responsivo */
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+}
+
+.hero-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  margin: 0;
+}
+
+
+
+
+/* ----- Sección Ofertas ----- */
+.ofertas {
+  background-color: #fff3f3; /* fondo suave y llamativo */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.ofertas h2 {
+  font-family: "TikTok Sans", sans-serif;
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.subtitulo-ofertas {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Contenedor de tarjetas */
+.cards-ofertas {
+  display: flex;
+  flex-direction: column; /* en móvil apiladas */
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-oferta {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 350px;
+  width: 90%;
+}
+
+.card-oferta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.card-oferta img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.card-content h3 {
+  font-family: "TikTok Sans", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.precio-normal {
+  text-decoration: line-through;
+  color: #ff3b3b; 
+  font-weight: bold; /* hace que sea más grueso */
+
+}
+
+.precio-oferta {
+  color: #080000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Botón dentro de tarjeta */
+.card-content .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #0078ff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-content .btn:hover {
+  background-color: #005fcc;
+  transform: translateY(-2px);
+}
+
+
+
+/* ----- Sección Alojamientos Principales ----- */
+.alojamientos-principales {
+  background: linear-gradient(180deg, #f9fbfc 0%, #fff8f3 100%);
+  padding: 70px 10px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.titulo-principal {
+  font-size: 2.4rem;
+  color: #004080;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.subtitulo-alojamientos-principal {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 60px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ----- Grid ----- */
+.grid-propiedades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 30px;
+}
+
+/* ----- Tarjeta de Propiedad ----- */
+.tarjetaMenuPrincipal {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjetaMenuPrincipal:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+.tarjetaMenuPrincipal img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.seccion-alojamiento {
+  margin-bottom: 100px; /* empuja hacia abajo lo siguiente */
+  position: relative;
+  z-index: 0; /* mantiene su orden de apilamiento normal */
+}
+
+
+
+/* --- Columna 1: título y descripción --- */
+.columna-info h1 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.columna-info p {
+  color: #555;
+  padding-bottom: 50 px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* --- Columna 2: imagen --- */
+.columna-imagen img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Hace que sea cuadrada */
+  object-fit: cover; /* Recorta la imagen sin deformarla */
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* --- Columna 3: lista de características --- */
+.columna-caracteristicas ul {
+  list-style: none; /* Quita las viñetas predeterminadas */
+  padding: 0;
+  margin: 0;
+}
+
+.columna-caracteristicas li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.apartado-amplio {
+  position: relative;
+background-image: url("lago.jpg"); /* imagen tenue o texturizada */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.6); /* color oscuro semitransparente sobre la imagen */
+  z-index: 1;
+}
+
+.contenido-apartado {
+  position: relative;
+  z-index: 2; /* hace que esté sobre el overlay */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.texto-apartado-amplio {
+  width: 45%;
+  text-align: left;
+}
+
+.texto-apartado-amplio h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.texto-apartado-amplio p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.boton-apartado {
+  background-color: #ff7b00;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.boton-apartado:hover {
+  background-color: #ffa133;
+}
+
+.imagen-apartado-amplio {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.imagen-apartado-amplio img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .contenido-apartado {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .texto-apartado-amplio,
+  .imagen-apartado-amplio {
+    width: 100%;
+  }
+
+  .imagen-apartado-amplio img {
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
+
+
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .grid-propiedades {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-tarjetaMenuPrincipalGrande {
+    grid-template-columns: 1fr;
+  }
+}
+/* ----- Contenido de la Tarjeta ----- */
+.contenido-tarjeta {
+  padding: 20px;
+  text-align: left;
+}
+
+
+
+.contenido-tarjeta h3 {
+  font-size: 1.3rem;
+  color: #003366;
+  margin-bottom: 8px;
+}
+
+.ubicacion {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.precio {
+  font-size: 1.1rem;
+  color: #009688;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* ----- Botón ----- */
+.btn-ver-detalles {
+  background-color: #004080;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s;
+}
+
+.btn-ver-detalles:hover {
+  background-color: #0059b3;
+}
+
+/* ----- Responsivo ----- */
+@media (max-width: 600px) {
+  .titulo-principal {
+    font-size: 1.8rem;
+  }
+
+  .subtitulo-alojamientos-principal {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .cards-ofertas {
+    flex-direction: row; /* ahora se colocan en horizontal */
+    flex-wrap: wrap; /* si hay más de dos, bajan ordenadamente */
+    justify-content: center; /* centradas horizontalmente */
+    gap: 40px; /* un poco más de espacio entre ellas */
+  }
+
+  .card-oferta {
+    max-width: 350px; /* mantiene el ancho visual */
+    width: 100%; /* se ajusta al espacio disponible */
+  }
+}
+
+
+.paraAnfitriones {
+  flex: 1 1 250px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.dueño{
+
+  margin: auto;
+  width: 150px;
+  height: 150px;
+}
+.paso h3 {
+  margin-bottom: 10px;
+  color: #004080;
+}
+
+/* ----- Sección anfitriones ----- */
+.anfitriones {
+  background-color: #f8f9fa; /* fondo claro */
+  padding: 80px 20px;
+  margin-bottom: 60px;      
+  text-align: center;
+}
+
+.anfitrion-contenido {
+  display: flex;
+  flex-direction: column; /* primero imagen, luego texto (en móvil) */
+  align-items: center;
+  justify-content: center;
+  gap: 25px; /* espacio entre imagen y texto */
+  max-width: 900px;
+  margin: 0 auto; /* centrar el bloque */
+}
+
+.anfitriones h2 {
+  font-family: "TikTok Sans", sans-serif;
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.anfitriones p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 500px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+}
+
+.dueño {
+  width: 200px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.dueño:hover {
+  transform: scale(1.05);
+}
+
+/* Botón */
+.btn {
+  display: inline-block;
+  background-color: #0078ff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #005fcc;
+  transform: translateY(-2px);
+}
+
+/* En pantallas grandes: imagen y texto lado a lado */
+@media (min-width: 768px) {
+  .anfitrion-contenido {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .texto-anfitrion {
+    flex: 1;
+    padding-left: 30px;
+  }
+
+  .dueño {
+    width: 250px;
+  }
+}
+
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #004080;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #003366;
+}
+
+/* Footer */
+.footer {
+  background: #004080;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.footer p {
+  margin: 8px 0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+  }
+
+  .menu {
+    margin-top: 10px;
+  }
+
+  .menu a {
+    margin: 0 10px;
+  }
+
+  .pasos {
+    flex-direction: column;
+    align-items: center;
+  }
+}

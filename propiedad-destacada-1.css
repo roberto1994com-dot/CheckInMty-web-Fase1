@@ -1,0 +1,645 @@
+/* --- HEADER MEJORADO --- */
+header {
+    width: 100%;
+    padding: 15px 5%; /* Usamos % para que se adapte mejor */
+    
+    /* Efecto Glassmorphism (Vidrio esmerilado) */
+    background: rgba(255, 255, 255, 0.9); /* Blanco al 90% */
+    backdrop-filter: blur(10px); /* Desenfoca lo que pase por detrás */
+    border-bottom: 1px solid rgba(0,0,0,0.05); /* Borde sutil en vez de sombra pesada */
+    
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Logotipo más moderno */
+header .logo {
+    font-size: 1.6rem;
+    font-weight: 800; /* Más grueso */
+    color: #222; /* Negro suave estilo Airbnb */
+    letter-spacing: -0.5px; /* Las letras un poco más juntas se ven más pro */
+    cursor: pointer;
+}
+
+/* Contenedor de navegación */
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espacio entre elementos usando gap es mejor que margin */
+}
+
+/* Enlaces normales */
+header nav .link {
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #555;
+    position: relative; /* Necesario para la animación de la línea */
+    padding: 5px 0;
+}
+
+/* Animación de la línea debajo al pasar el mouse */
+header nav .link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0b6bff; /* Tu color azul */
+    transition: width 0.3s ease;
+}
+
+header nav .link:hover {
+    color: #0b6bff;
+}
+
+header nav .link:hover::after {
+    width: 100%; /* La línea crece al 100% */
+}
+
+/* --- BOTÓN DE ACCIÓN (CTA) --- */
+header nav .btn-primary {
+    text-decoration: none;
+    background-color: #0b6bff; /* Fondo Azul */
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px; /* Bordes redondos tipo píldora */
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(11, 107, 255, 0.2); /* Sombra suave azul */
+}
+
+header nav .btn-primary:hover {
+    background-color: #0056d6; /* Azul un poco más oscuro */
+    transform: translateY(-2px); /* El botón se eleva un poco */
+    box-shadow: 0 6px 15px rgba(11, 107, 255, 0.3);
+}
+
+/* Ajuste para móviles (Oculta el menu si la pantalla es muy chica) */
+@media (max-width: 600px) {
+    header nav { display: none; } /* Aquí luego pondríamos un menú hamburguesa */
+    header { justify-content: center; }
+}
+
+        /* --- ESTILOS GENERALES --- */
+        :root {
+            --primary-color: #222; /* Texto oscuro */
+            --secondary-color: #717171; /* Texto gris */
+            --accent-color: #0ac74f; /* Verde WhatsApp */
+            --bg-color: #f7f7f7;
+            --card-bg: #ffffff;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        @media(min-width: 900px) {
+            .container { margin: 40px auto; border-radius: var(--radius); }
+        }
+
+       /* ===== HERO / PORTADA ===== */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Altura elegante */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagen de portada */
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(75%); /* Oscurece para que el texto se vea */
+
+    
+}
+
+/* Contenido encima de la imagen */
+.hero-content {
+    position: absolute;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    max-width: 90%;
+}
+
+/* Título */
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Subtítulo */
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== VISOR DE IMÁGENES ===== */
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+
+.viewer-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    object-fit: contain;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .hero {
+        height: 55vh;
+    }
+
+    .hero-title {
+        font-size: 1.9rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+}
+
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            background-color: rgba(0,0,0,0.3);
+            user-select: none;
+            border-radius: 0 3px 3px 0;
+        }
+        .next { right: 0; border-radius: 3px 0 0 3px; }
+        .prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+
+        /* --- CONTENIDO --- */
+        .content-wrapper { padding: 30px 20px; }
+
+        /* --- 2. NOMBRE PROPIEDAD --- */
+        .property-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .location-tag {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+
+        /* --- 3. AMENIDADES (Grid) --- */
+/* RESET Y FUENTES */
+:root {
+    --primary: #222222;
+    --secondary: #717171;
+    --brand: #FF385C; /* El rojo rosado de Airbnb */
+    --whatsapp: #0056d6;
+    --line: #dddddd;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Manrope', sans-serif; /* Fuente similar a Circular */
+    color: var(--primary);
+    line-height: 1.5;
+    background: #fff;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    padding: 15px 5%;
+    
+    /* CORRECCIÓN 1: Fondo blanco SÓLIDO (sin transparencia) */
+    background: #ffffff; 
+    
+    /* CORRECCIÓN 2: Sombra para que se note dónde termina el header */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    
+    position: sticky;
+    top: 0;
+    
+    /* CORRECCIÓN 3: El número más alto posible para estar siempre encima */
+    z-index: 9999; 
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.logo {     font-size: 1.6rem;
+    font-weight: 800; /* Más grueso */
+    color: #222; /* Negro suave estilo Airbnb */
+    letter-spacing: -0.5px; /* Las letras un poco más juntas se ven más pro */
+    cursor: pointer; }
+
+
+
+
+.guest-btn {
+    background: var(--brand);
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+}
+
+/* LAYOUT PRINCIPAL */
+.container {
+    max-width: 1120px;
+    margin: 20px auto;
+    padding: 0 24px;
+}
+
+/* TITULO */
+.title-section h1 { font-size: 1.6rem; margin-bottom: 10px; font-weight: 600; }
+.subtitle { font-size: 0.9rem; font-weight: 600; text-decoration: underline; margin-bottom: 20px; }
+.subtitle i { color: var(--primary); margin-right: 4px; }
+
+/* GALERIA TIPO MOSAICO (GRID) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+/* En desktop, hacemos el layout 1 grande + 4 pequeñas */
+@media(min-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 200px 200px;
+    }
+    .main-img { grid-row: 1 / span 2; }
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+.gallery-grid img:hover { opacity: 0.9; }
+
+/* COLUMNAS DE CONTENIDO */
+.content-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    position: relative;
+}
+@media(min-width: 900px) {
+    .content-layout { grid-template-columns: 1.8fr 1fr; }
+}
+
+/* COLUMNA IZQUIERDA */
+hr { border: 0; border-top: 1px solid #ebebeb; margin: 32px 0; }
+
+.host-info { display: flex; justify-content: space-between; align-items: center; }
+.host-info h2 { font-size: 1.3rem; margin-bottom: 5px; }
+.host-info p { color: var(--secondary); font-size: 0.9rem; }
+
+.host-avatar {
+    width: 56px; height: 56px;
+    background: #222; color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Estilo Verificación */
+.verification-banner {
+    display: flex;
+    gap: 20px;
+    align-items: start;
+}
+.badge-icon { font-size: 2rem; color: var(--brand); }
+
+/* Lista Amenidades Limpia */
+.amenities-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.amenity-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1rem;
+    color: #444;
+}
+.amenity-row i { width: 20px; text-align: center; font-size: 1.2rem; }
+
+/* COLUMNA DERECHA (TARJETA FLOTANTE) */
+.right-col { position: relative; }
+
+.booking-card {
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+    position: sticky; /* La magia de quedarse fijo */
+    top: 100px; 
+    background: white;
+}
+
+.card-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 20px;
+}
+.price { font-size: 1.4rem; font-weight: 700; }
+.night { font-size: 1rem; font-weight: 400; color: var(--secondary); }
+
+.dates-box {
+    border: 1px solid #b0b0b0;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+.date-top { display: flex; border-bottom: 1px solid #b0b0b0; }
+.check-in, .check-out { width: 50%; padding: 10px; font-size: 0.65rem; font-weight: 800; color: var(--primary); }
+.check-out { border-left: 1px solid #b0b0b0; }
+.guests { padding: 10px; font-size: 0.65rem; font-weight: 800; }
+.guests span, .check-in span, .check-out span { 
+    display: block; font-size: 0.9rem; font-weight: 400; margin-top: 2px; color: #717171; 
+}
+
+.reserve-btn {
+    display: block;
+    width: 100%;
+    background: linear-gradient(90deg, var(--brand) 0%, #d90b3e 100%); /* Gradiente Airbnb */
+    /* O si prefieres WhatsApp: background: var(--whatsapp); */
+    color: white;
+    text-align: center;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+/* Cambiamos al verde si es WhatsApp */
+.reserve-btn { background: var(--whatsapp); }
+
+.no-charge { text-align: center; font-size: 0.85rem; color: var(--secondary); margin-bottom: 20px; }
+
+.total-row {
+    display: flex; justify-content: space-between;
+    padding-top: 20px; border-top: 1px solid #ebebeb;
+    font-weight: 600; color: #717171;
+}
+
+        /* --- 4. DESCRIPCION --- */
+        .description-text {
+            color: #555;
+            white-space: pre-line; /* Respeta saltos de línea */
+            margin-bottom: 40px;
+        }
+
+        /* --- 5. MOSAICO DE IMAGENES (Estética) --- */
+        .gallery-mosaic {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 200px 200px;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+        
+        .mosaic-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .mosaic-img:hover { transform: scale(1.02); }
+
+        /* --- ESTILOS DEL LIGHTBOX (Pantalla Completa) --- */
+
+/* El fondo oscuro que cubre toda la pantalla */
+.lightbox-overlay {
+    position: fixed; /* Se queda fijo al hacer scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Negro al 90% de opacidad */
+    z-index: 10000; /* Se asegura de estar encima de TODO, incluso del header */
+    
+    /* Flexbox para centrar la imagen perfectamente */
+    display: none; /* Oculto por defecto */
+    justify-content: center;
+    align-items: center;
+    
+    /* Animación suave al aparecer */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Clase que agregaremos con JS para mostrarlo */
+.lightbox-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+/* La imagen grande dentro del lightbox */
+.lightbox-image {
+    max-width: 90%; /* Que no sea más ancha que el 90% de la pantalla */
+    max-height: 90%; /* Que no sea más alta que el 90% de la pantalla */
+    object-fit: contain; /* Asegura que la imagen se vea completa sin recortes */
+    border-radius: 4px;
+    box-shadow: 0 5px 25px rgba(255,255,255,0.1);
+}
+
+/* El botón de cerrar (X) */
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 10001;
+}
+
+.close-lightbox:hover {
+    color: #FF385C; /* Color de acento al pasar el mouse */
+}
+
+/* Cursor de lupa para AMBAS galerías */
+.gallery-mosaic .mosaic-img, 
+.gallery-grid img {
+    cursor: zoom-in;
+    transition: opacity 0.3s; /* Suaviza el efecto hover */
+}
+
+/* Un pequeño efecto extra para que se note que son clicables */
+.gallery-grid img:hover {
+    opacity: 0.9;
+}
+
+/* Un pequeño truco para que el cursor en tus fotos de la galería indique que se pueden clicar */
+.gallery-mosaic .mosaic-img {
+    cursor: zoom-in;
+}
+
+        /* La primera imagen ocupa 2 filas (es la grande vertical o cuadrada) */
+        .mosaic-img:nth-child(1) {
+            grid-row: 1 / span 2;
+        }
+
+        /* En móviles, hacemos que se apilen */
+        @media(max-width: 600px) {
+            .gallery-mosaic {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+            .mosaic-img:nth-child(1) { grid-row: auto; height: 250px; }
+            .mosaic-img:nth-child(2), .mosaic-img:nth-child(3) { height: 180px; }
+        }
+
+        /* --- 6. BOTON WHATSAPP --- */
+        .cta-container { text-align: center; margin: 40px 0; }
+        
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #0056d6, #4384e7);
+            color: white;
+            text-decoration: none;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s ease;
+        }
+        .whatsapp-btn:hover { transform: translateY(-3px); }
+        .whatsapp-btn i { margin-right: 10px; font-size: 1.4rem; }
+
+        /* --- 7. VERIFICACIÓN --- */
+        .verification-section {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #007bff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .verification-text {
+            font-weight: 600;
+            color: #0056b3;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .verification-img {
+            max-width: 150px; /* Ajusta según tu logo */
+            height: auto;
+            border-radius: 4px;
+            /* mix-blend-mode: multiply; Si la imagen tiene fondo blanco y quieres integrarla */
+        }
+
+        /* --- ESTILOS IMAGEN FINAL --- */
+.final-banner-container {
+    margin: 40px 0 30px; /* Espacio arriba y abajo */
+    width: 100%;
+    overflow: hidden; /* Asegura que las esquinas redondas funcionen */
+    border-radius: 16px; /* Esquinas redondeadas modernas */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Sombra suave para realzar */
+}
+
+.final-banner-img {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 450px; /* Altura fija para que sea un banner panorámico */
+    object-fit: cover; /* La imagen se recorta para llenar el espacio sin deformarse */
+    display: block; /* Elimina espacios extraños debajo de la imagen */
+    transition: transform 0.5s ease;
+}
+
+/* Efecto opcional: ligero zoom al pasar el mouse */
+.final-banner-container:hover .final-banner-img {
+    transform: scale(1.03);
+}
+
+/* Ajuste para celulares: que sea un poco más alta */
+@media (max-width: 600px) {
+    .final-banner-img {
+        height: 200px;
+    }
+}
+

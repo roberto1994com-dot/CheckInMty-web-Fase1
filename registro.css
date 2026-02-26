@@ -1,0 +1,249 @@
+/* --- ESTILOS PÁGINA DE REGISTRO --- */
+
+/* Hero Section (Título con fondo suave) */
+/* --- ESTILOS PROFESIONALES (registro.css) --- */
+
+/* 1. Configuración Base y Variables */
+:root {
+    --primary: #222222;
+    --secondary: #717171;
+    --brand: #0b6bff;
+    --brand-hover: #0050c2;
+    --bg-page: #ffffff;
+    --bg-card: #ffffff;
+    --whatsapp: #25D366;
+    --shadow-soft: 0 10px 40px rgba(0,0,0,0.08); /* Sombra de lujo */
+    --shadow-hover: 0 20px 50px rgba(0,0,0,0.12);
+    --radius-card: 24px; /* Bordes más redondos */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Manrope', sans-serif;
+    color: var(--primary);
+    background-color: var(--bg-page);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased; /* Texto más nítido */
+}
+
+/* 2. Header (Limpio y Minimalista) */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px); /* Efecto vidrio */
+    padding: 15px 5%;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { 
+    font-size: 1.5rem; 
+    font-weight: 800; 
+    color: var(--primary); 
+    letter-spacing: -0.5px;
+}
+
+.nav-link { 
+    text-decoration: none; 
+    color: var(--secondary); 
+    font-weight: 600; 
+    font-size: 0.95rem; 
+    display: flex; align-items: center; gap: 8px;
+    transition: all 0.3s ease;
+}
+.nav-link:hover { color: var(--brand); transform: translateX(-3px); }
+
+/* 3. Hero Section (Impacto Visual) */
+.hero {
+    text-align: center;
+    padding: 80px 20px 50px;
+    background: radial-gradient(circle at top, #f0f8ff, #fff 70%);
+}
+.hero h1 { 
+    font-size: 2.5rem; 
+    margin-bottom: 15px; 
+    color: var(--primary);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+.hero p { 
+    font-size: 1.15rem; 
+    color: var(--secondary); 
+    max-width: 650px; 
+    margin: 0 auto; 
+}
+
+/* 4. Contenedor Principal */
+.container-registro {
+    max-width: 750px; /* Un poco más estrecho para elegancia */
+    margin: 0 auto;
+    padding: 0 20px 80px;
+}
+
+/* 5. Tarjetas de Pasos (Estilo Tarjeta Elevada) */
+.step-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(0,0,0,0.04); /* Borde casi invisible */
+    border-radius: var(--radius-card);
+    padding: 40px;
+    margin-bottom: 50px;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animación rebote suave */
+}
+
+/* Efecto al pasar el mouse: La tarjeta sube */
+.step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Número Flotante Moderno */
+.step-number {
+    background: linear-gradient(135deg, var(--brand), #0056d6);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px; /* Cuadrado redondeado (Squircle) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(11, 107, 255, 0.3);
+}
+
+.step-card h3 { 
+    margin-bottom: 10px; 
+    font-size: 1.4rem; 
+    font-weight: 700; 
+    color: #111;
+}
+.step-card p { 
+    color: var(--secondary); 
+    margin-bottom: 25px; 
+    font-size: 1rem;
+}
+
+/* Imágenes de ejemplo (Estilo Foto Final) */
+.example-img {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 16px; /* Bordes redondos en la foto */
+    border: none; /* Quitamos el borde punteado */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1); /* Sombra a la foto */
+    transition: transform 0.3s ease;
+}
+
+/* Pequeño zoom en la foto al pasar el mouse */
+.step-card:hover .example-img {
+    transform: scale(1.02);
+}
+
+.img-caption {
+    font-size: 0.8rem;
+    color: #999;
+    text-align: center;
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+/* 6. Tabla de Resumen (Estilo Clean) */
+/* 6. Tabla de Resumen (Con Marco Azul) */
+.summary-section {
+    margin-top: 80px;
+    padding: 40px;
+    background: #fff;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-soft);
+    
+    /* AQUÍ EL CAMBIO: Marco azul sólido */
+    border: 2px solid var(--brand); 
+    
+    /* Opcional: Un fondo azul muy tenue para diferenciarlo del resto */
+    background-color: #f8fbff; 
+}
+
+.summary-section h2 { 
+    margin-bottom: 10px; 
+    color: var(--brand); /* Título también en azul */
+    font-weight: 800; 
+    text-align: center;
+}
+
+.summary-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    
+    /* Borde fino azul alrededor de la tabla interna */
+    border: 1px solid #cce5ff; 
+    background: white;
+}
+
+.summary-table th, .summary-table td {
+    padding: 18px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e1ecf4;
+}
+
+.summary-table th { 
+    background-color: #e3f2fd; /* Fondo azul claro en encabezados */
+    color: #004ba0; /* Texto azul oscuro */
+    font-weight: 700; 
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--brand); /* Línea más fuerte bajo los títulos */
+}
+
+.summary-table tr:last-child td { border-bottom: none; }
+.summary-table tr:hover td { background-color: #f9f9f9; } /* Efecto hover en filas */
+
+/* 7. Botón Grande WhatsApp (Estilo Pill) */
+.final-cta {
+    text-align: center;
+    margin: 60px 0 100px;
+}
+
+.wa-button-large {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); /* Gradiente Pro */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 20px 50px;
+    border-radius: 100px;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); /* Sombra brillante */
+    transition: all 0.3s ease;
+    position: relative;
+    top: 0;
+}
+
+.wa-button-large:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+}
+.wa-button-large:active { transform: translateY(0); }
+
+.wa-button-large i { margin-right: 12px; font-size: 1.6rem; }
+
+.note-text {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 20px;
+}

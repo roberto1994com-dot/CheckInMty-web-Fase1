@@ -1,0 +1,42 @@
+body {
+    margin:0;
+  background-color: lightgray;
+}
+/* barra de navegacion */
+.navbar {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#222; /* color del fondo*/
+    color: white;
+    padding: 10px 20px;
+}
+/*seleccion del logo*/
+.logoMty {
+display:flex;
+align-items: center;
+}
+.logoMty img {
+    width: 90px;
+    height: auto;
+    margin-right:550px;
+
+}
+.logoMty h1{
+font-size:24px;
+margin:0;
+}
+
+/*menu de navegacion*/ 
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+.menu a:hover {
+  color: #00bcd4;   /* cambia el color al pasar el cursor */
+}
