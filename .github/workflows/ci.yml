@@ -24,7 +24,7 @@ jobs:
         run: |
           aws ecr get-login-password --region $AWS_REGION | \
           docker login --username AWS --password-stdin \
-          442042528689.dkr.ecr.us-east-2.amazonaws.com/checkinmty-web
+          442042528689.dkr.ecr.us-east-2.amazonaws.com
 
       - name: Build Docker image
         run: |
