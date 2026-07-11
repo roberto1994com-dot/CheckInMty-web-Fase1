@@ -149,6 +149,6 @@ Future versions of this project may include:
 
 Cybersecurity Student | Future Application Security Engineer
 
-LinkedIn: *(Add your profile)*
+LinkedIn: *(www.linkedin.com/in/roberto-almaguer-681114257)*
 
 GitHub: https://github.com/roberto1994com-dot
