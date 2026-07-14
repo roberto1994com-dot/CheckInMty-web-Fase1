@@ -1,4 +1,4 @@
-# Cloud Web Deployment on AWS using DevOps Practices
+# AWS Cloud Web Deployment Lab
 
 ##  Project Overview
 
@@ -147,7 +147,7 @@ Future versions of this project may include:
 
 **Roberto Almaguer**
 
-Cybersecurity Student | Future Application Security Engineer
+Software Engineer
 
 LinkedIn: *(www.linkedin.com/in/roberto-almaguer-681114257)*
 
