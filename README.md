@@ -50,24 +50,13 @@ The objective was to deploy a functional website while applying infrastructure m
 
 ---
 
-## Deployment Architecture
+## Solution Architecture
 
-The deployment workflow follows this sequence:
+The following diagram illustrates the complete deployment workflow from local development to a publicly accessible website hosted on AWS.
 
-GitHub Repository  
-↓  
-GitHub Actions  
-↓  
-AWS EC2 Instance  
-↓  
-Apache HTTP Server  
-↓  
-Public Website  
-
-![AWS Deployment Architecture](images/SOLUTION ARCHITECTURE.png)
+![AWS Cloud Deployment Architecture](architecture/solution_architecture.png)
 
 ---
-
 ##  Security Practices
 
 During this project, several basic cloud security practices were implemented:
