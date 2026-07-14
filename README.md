@@ -6,7 +6,6 @@ This project demonstrates the deployment of a web application on Amazon Web Serv
 
 The objective was to deploy a functional website while applying infrastructure management, Linux server administration, cloud security fundamentals, and deployment automation. Throughout the project, industry-standard tools such as Amazon EC2, GitHub, GitHub Actions, Apache HTTP Server, and Linux were used to simulate a real-world deployment workflow.
 
-This project was developed as part of my DevOps coursework and has been enhanced as a professional portfolio project.
 
 ---
 
