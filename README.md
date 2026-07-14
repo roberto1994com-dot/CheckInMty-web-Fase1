@@ -50,25 +50,21 @@ The objective was to deploy a functional website while applying infrastructure m
 
 ---
 
-##  Deployment Architecture
+## Deployment Architecture
 
-GitHub Repository
+The deployment workflow follows this sequence:
 
-↓
+GitHub Repository  
+↓  
+GitHub Actions  
+↓  
+AWS EC2 Instance  
+↓  
+Apache HTTP Server  
+↓  
+Public Website  
 
-GitHub Actions
-
-↓
-
-AWS EC2 Instance
-
-↓
-
-Apache HTTP Server
-
-↓
-
-Public Website
+![AWS Deployment Architecture](images/SOLUTION ARCHITECTURE.png)
 
 ---
 
@@ -112,20 +108,22 @@ This project strengthened my understanding of:
 
 ---
 
-##  Skills Demonstrated
+## Skills Demonstrated
 
-- Cloud Computing
-- DevOps
-- AWS
-- Linux
-- Git
-- GitHub
-- GitHub Actions
-- Amazon EC2
-- Networking Fundamentals
-- Infrastructure Deployment
-- Security Best Practices
-- Technical Documentation
+| Skill | Demonstrated |
+|---|---|
+| Amazon Web Services | ✅ |
+| Amazon VPC | ✅ |
+| Security Groups | ✅ |
+| Amazon EC2 | ✅ |
+| Linux Administration | ✅ |
+| Apache HTTP Server | ✅ |
+| Git Version Control | ✅ |
+| GitHub | ✅ |
+| GitHub Actions | ✅ |
+| CI/CD Fundamentals | ✅ |
+| SSH Key Authentication | ✅ |
+| Technical Documentation | ✅ |
 
 ---
 
