@@ -129,6 +129,16 @@ Future versions of this project may include:
 
 ---
 
+## 📄 Project Report
+
+A complete technical report describing the project architecture, AWS deployment process, security configuration, implementation details, and lessons learned is available below.
+
+📥 **Download the report:**
+
+[Cloud Web Deployment Technical Report](reports/cloud_web_deployment_report.pdf)
+
+---
+
 ##  Author
 
 **Roberto Almaguer**
