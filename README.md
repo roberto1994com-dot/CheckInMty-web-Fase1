@@ -33,7 +33,6 @@ The objective was to deploy a functional website while applying infrastructure m
 - GitHub Actions
 - HTML
 - CSS
-- JavaScript
 
 ---
 
