@@ -234,13 +234,13 @@ grid-template-columns: repeat(3, 1fr);
 
 /* Cómo funciona */
 .como-funciona {
-  /* 👇 Usa tu imagen local aquí */
+ 
   background-image: url("C:/Users/rober/Documents/CheckInMty/mtyIMG.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* efecto leve de "parallax" */
+  background-attachment: fixed; 
   
-  /* 👇 Capa semitransparente para que el texto sea legible */
+  
   position: relative;
   z-index: 1;
   padding: 80px 0;
@@ -299,7 +299,7 @@ grid-template-columns: repeat(3, 1fr);
 .hero-header {
   position: relative;
   height: 120vh; /* ocupa toda la pantalla */
-  background-image: url("bosque.jpg"); /* tu imagen */
+  background-image: url("bosque.jpg"); 
   background-size: cover;
   background-position: center;
   display: flex;
@@ -345,7 +345,7 @@ grid-template-columns: repeat(3, 1fr);
   transform: translateY(-3px);
 }
 
-/* Texto principal centrado */
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -745,7 +745,7 @@ background-image: url("lago.jpg"); /* imagen tenue o texturizada */
 }
 @media (min-width: 768px) {
   .cards-ofertas {
-    flex-direction: row; /* ahora se colocan en horizontal */
+    flex-direction: row; 
     flex-wrap: wrap; /* si hay más de dos, bajan ordenadamente */
     justify-content: center; /* centradas horizontalmente */
     gap: 40px; /* un poco más de espacio entre ellas */
