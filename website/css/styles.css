@@ -235,7 +235,7 @@ grid-template-columns: repeat(3, 1fr);
 /* Cómo funciona */
 .como-funciona {
  
-  background-image: url("C:/Users/rober/Documents/CheckInMty/mtyIMG.jpg");
+  background-image: url("../../images/mtyIMG.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed; 
@@ -299,7 +299,7 @@ grid-template-columns: repeat(3, 1fr);
 .hero-header {
   position: relative;
   height: 120vh; /* ocupa toda la pantalla */
-  background-image: url("bosque.jpg"); 
+  background-image: url("../../images/bosque.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -583,7 +583,7 @@ grid-template-columns: repeat(3, 1fr);
 
 .apartado-amplio {
   position: relative;
-background-image: url("lago.jpg"); /* imagen tenue o texturizada */
+  background-image: url("../../images/lago.jpg"); /* imagen tenue o texturizada */
   background-size: cover;
   background-position: center;
   color: white;
@@ -767,7 +767,7 @@ background-image: url("lago.jpg"); /* imagen tenue o texturizada */
   text-align: center;
 }
 
-.dueño{
+.propietario{
 
   margin: auto;
   width: 150px;
@@ -811,7 +811,7 @@ background-image: url("lago.jpg"); /* imagen tenue o texturizada */
   line-height: 1.6;
 }
 
-.dueño {
+.propietario {
   width: 200px;
   height: auto;
   border-radius: 15px;
@@ -819,7 +819,7 @@ background-image: url("lago.jpg"); /* imagen tenue o texturizada */
   transition: transform 0.3s ease;
 }
 
-.dueño:hover {
+.propietario:hover {
   transform: scale(1.05);
 }
 
@@ -852,7 +852,7 @@ background-image: url("lago.jpg"); /* imagen tenue o texturizada */
     padding-left: 30px;
   }
 
-  .dueño {
+  .propietario {
     width: 250px;
   }
 }
